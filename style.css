@@ -1,0 +1,189 @@
+/* Import */
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary: hsl(25, 97%, 53%);
+    --neutral-white: hsl(0, 0%, 100%);
+    --light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+/* Core */
+* {
+    font-family: 'Overpass', sans-serif;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    background-color: var(--very-dark-blue);
+}
+
+.showcase{    
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: var(--neutral-white);
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 327px;
+    height: 358px;
+    padding: 35px;
+    border-radius: 25px;
+    background-color: var(--dark-blue);
+    color: var(--light-grey)
+}
+
+.container.hidden {
+    display: none;
+}
+
+/* Buttons */
+.btn {
+    width: inherit;
+    cursor: pointer;
+    height: 47px;
+    padding: 0 50px;
+    background-color: var(--primary);
+    color: var(--neutral-white);
+    text-transform: uppercase;
+    border: none;
+    border-radius: 25px;
+}
+
+.btn:hover, .btn:active {
+    background-color: var(--neutral-white);
+    color: var(--primary);
+}
+
+/* Valuation */
+#valuation{
+    align-items: flex-start;
+}
+
+#valuation.hidden {
+    display: none;
+}
+
+#valuation .image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--medium-grey);
+}
+
+#valuation .image img {
+    width: 40%;
+    height: 40%;
+    left: -25px;
+}
+
+#valuation .content h1{
+    margin-bottom: 20px;
+}
+
+#valuation ul {
+    display: flex;
+    justify-content: space-between;
+    width: inherit;
+}
+
+#valuation ul li {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    color: var(--neutral-white);
+    background-color: var(--medium-grey);
+    opacity: 0.25;
+    border-radius: 50%;
+}
+
+#valuation ul li:hover {
+    opacity: 1;
+    background-color: var(--medium-grey);
+}
+
+#valuation ul li:active {
+    color: var(--neutral-white);
+    background-color: var(--primary);
+}
+
+/* Gratitude */
+#gratitude.hidden {
+    display: none;
+}
+
+#gratitude {
+    text-align: center;
+}
+
+#gratitude img {
+    width: 50%;
+}
+
+#gratitude .announcement {
+    padding: 5px 10px;
+    color: var(--primary);
+    background-color: var(--medium-grey);
+    border-radius: 25px;
+}
+
+/* Attribution */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media(min-width: 1440px) {
+    .container{
+        width: 412px;
+        height: 417px;
+    }
+}
+
+@media(min-width: 375px) {
+    .container{
+        width: 327px;
+        height: 358px;
+    }
+
+    #valuation .image{
+        width: 40px;
+        height: 40px; 
+    }
+
+    #valuation ul li {
+        width: 40px;
+        height: 40px;
+    }
+}
